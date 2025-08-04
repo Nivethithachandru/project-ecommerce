@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Setup Python Virtual ENV') {
+            steps {
+                script {
+                    sh 'chmod +x envsetup.sh'
+                    sh 'bash ./envsetup.sh' 
+                }
+            }
+        }
+          stage('Setup Django') {
+            steps {
+                script {
+                    sh 'chmod +x django.sh'
+                    sh 'bash ./django.sh'  
+                }
+            }
+         }
+          stage('Setup Nginx') {
+            steps {
+                script {
+                    sh 'chmod +x nginx.sh'
+                    sh 'bash ./nginx.sh'  
+                }
+            }
+         } 
+      }
+   }
