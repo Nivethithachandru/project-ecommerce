@@ -1,0 +1,15 @@
+[Unit]
+Description=Ecommerce Django Web Service
+After=network.target
+
+[Service]
+User=cosai
+Group=cosai
+WorkingDirectory=/var/lib/jenkins/workspace/project_Ecommerce
+ExecStart=/var/lib/jenkins/workspace/env/bin/python3 manage.py runserver 0.0.0.0:8010
+Environment="PYTHONUNBUFFERED=1"
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
