@@ -1,11 +1,12 @@
 #!/bin/bash
 
 set -e
+sudo chmod u+x nginx.sh 
 
-sudo cp -rf demo /etc/nginx/sites-available/demo
+sudo cp -r ecom /etc/nginx/sites-available/ecom
 
-if [ ! -L /etc/nginx/sites-enabled/demo ]; then
-    sudo ln -s /etc/nginx/sites-available/demo /etc/nginx/sites-enabled/demo
+if [ ! -L /etc/nginx/sites-enabled/ecom ]; then
+    sudo ln -s /etc/nginx/sites-available/ecom /etc/nginx/sites-enabled/ecom
 fi
 
 sudo chmod 710 /var/lib/jenkins/workspace/project_Ecommerce
