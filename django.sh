@@ -7,7 +7,7 @@ cd /var/lib/jenkins/workspace
 
 source "venv/bin/activate"
 
-cd /var/lib/jenkins/workspace/project_Ecommerce
+cd /var/lib/jenkins/workspace/project_Ecommerce/core
 
 python3 manage.py makemigrations
 python3 manage.py migrate
