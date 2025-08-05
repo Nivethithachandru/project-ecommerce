@@ -1,10 +1,9 @@
 #!/bin/bash
 
 set -e
+set -x
 
-sudo chmod u+x nginx.sh 
-
-sudo cp ecom /etc/nginx/sites-available/ecom
+sudo cp -rf ecom /etc/nginx/sites-available
 
 if [ ! -L /etc/nginx/sites-enabled/ecom ]; then
     sudo ln -s /etc/nginx/sites-available/ecom /etc/nginx/sites-enabled/ecom
