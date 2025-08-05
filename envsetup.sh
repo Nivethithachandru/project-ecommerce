@@ -3,7 +3,7 @@
 set -e
 set -x
 
-PROJECT_DIR="/var/lib/jenkins/workspace"
+PROJECT_DIR="/var/lib/jenkins/workspace/project_ecommerce"
 VENV_PATH="/var/lib/jenkins/workspace/venv"
 
 
