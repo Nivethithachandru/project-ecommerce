@@ -14,6 +14,8 @@ python3 manage.py collectstatic --noinput
 
 echo " Migrations and static file collection completed."
 
+cd ..
+
 if [ -f "ecommerce.service" ]; then
     sudo cp -rf "ecommerce.service" /etc/systemd/system/
     sudo systemctl daemon-reload
