@@ -23,7 +23,7 @@ echo "Activating virtual environment..."
 source "$VENV_PATH/bin/activate"
 
 
-cd "$PROJECT_DIR/project_Ecommerce" || { echo "django_webpage directory not found"; exit 1; }
+cd "$PROJECT_DIR" || { echo "django_webpage directory not found"; exit 1; }
 
 
 echo "Installing Python dependencies..."
