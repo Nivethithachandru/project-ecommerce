@@ -47,7 +47,7 @@ def user_registration(request):
                 new_user = authenticate(username = user_email,password =  user_password)
                 login(request, new_user)
                 return redirect("/")
-                
+
         return render(request,"user-profile/userReg.html")
     except Exception as e:
         print(e)
@@ -124,14 +124,11 @@ def user_cart(request):
                 "cart" : cart,
                 "cart_items" : cart_items
             }
-        
-        
-            print("cart",cart[0].cart_dicount())
-            return render(request,"user-profile/userCart.html",context)
+
     else:
         return render(request, "user-profile/userLogin.html", )
 
-            
+
 
 def remove_cart_items(request,u_id):
     if request.user.is_authenticated:
@@ -149,15 +146,15 @@ def check_out(request, cart_id):
         order = Orders.objects.create(
             for_user = request.user,
             for_cart = cart,
-            
+
             )
         order.items.set(cart_items)
-       
-        
-       
+
+
+
         order.save()
         print(order.order_total())
-        
+
         user = request.user
         client = razorpay.Client(auth = ("testKey","testid"))
         order = Orders.objects.filter(for_user = user)
@@ -169,7 +166,7 @@ def check_out(request, cart_id):
                 "payment_capture" : 1,
             }
             )
-        
+
         payment_details = User_Payments.objects.create(
             for_user = user,
             for_order = order,
@@ -182,7 +179,7 @@ def check_out(request, cart_id):
             "order" : order,
             "payment_details" :payment_details
         }
-        
+
         return render(request, "payments/checkout.html",context)
     else:
         return render(request, "user-profile/userLogin.html", )
@@ -198,5 +195,5 @@ def orders(request):
     else:
         return render(request, "user-profile/userLogin.html", )
 
-    
+
 
