@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -x
 
 PROJECT_DIR="/var/lib/jenkins/workspace"
 VENV_PATH="/var/lib/jenkins/workspace/venv"

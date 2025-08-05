@@ -3,10 +3,10 @@ Description=Ecommerce Django Web Service
 After=network.target
 
 [Service]
-User=cosai
-Group=cosai
+User=root
+Group=root
 WorkingDirectory=/var/lib/jenkins/workspace/project_Ecommerce
-ExecStart=/var/lib/jenkins/workspace/venv/bin/python3 manage.py runserver 0.0.0.0:8011
+ExecStart=/var/lib/jenkins/workspace/venv/bin/python3 manage.py runserver 0.0.0.0:8000
 Environment"PATH=/var/lib/jenkins/workspace/venv"
 Restart=always
 RestartSec=3
