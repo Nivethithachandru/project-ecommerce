@@ -3,7 +3,7 @@
 set -e
 set -x
 
-sudo cp -rf ecom /etc/nginx/sites-available
+sudo cp -rf ecom /etc/nginx/sites-available/ecom
 
 if [ ! -L /etc/nginx/sites-enabled/ecom ]; then
     sudo ln -s /etc/nginx/sites-available/ecom /etc/nginx/sites-enabled/ecom
