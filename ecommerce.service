@@ -6,7 +6,7 @@ After=network.target
 User=cosai
 Group=cosai
 WorkingDirectory=/var/lib/jenkins/workspace/project_Ecommerce
-ExecStart=/var/lib/jenkins/workspace/env/bin/python3 manage.py runserver 0.0.0.0:8002
+ExecStart=/var/lib/jenkins/workspace/env/bin/python3 manage.py runserver 0.0.0.0:8004
 Environment="PYTHONUNBUFFERED=1"
 Restart=always
 RestartSec=3
