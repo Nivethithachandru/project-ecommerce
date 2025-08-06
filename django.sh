@@ -2,7 +2,7 @@
 
 set -e
 
-cd /var/lib/jenkins
+cd /var/lib/jenkins/workspace
 
 source "venv/bin/activate"
 
