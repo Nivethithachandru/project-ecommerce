@@ -6,9 +6,9 @@ set -x
 PROJECT_DIR="/var/lib/jenkins/workspace"
 VENV_PATH="/var/lib/jenkins/workspace/venv"
 
-
 sudo chmod u+x /var/lib/jenkins/workspace
 sudo chmod u+x "$PROJECT_DIR"
+sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/venv
 
 
 if [ ! -f "$VENV_PATH/bin/activate" ]; then
