@@ -8,7 +8,6 @@ VENV_PATH="/var/lib/jenkins/workspace/venv"
 
 sudo chmod u+x /var/lib/jenkins/workspace
 sudo chmod u+x "$PROJECT_DIR"
-sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/venv
 
 
 if [ ! -f "$VENV_PATH/bin/activate" ]; then
@@ -22,6 +21,7 @@ fi
 echo "Activating virtual environment..."
 source "$VENV_PATH/bin/activate"
 
+sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/venv
 
 cd "$PROJECT_DIR/project_Ecommerce" || { echo "django_webpage directory not found"; exit 1; }
 sudo chmod u+x "$PROJECT_DIR/project_Ecommerce"
