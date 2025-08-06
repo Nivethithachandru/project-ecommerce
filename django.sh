@@ -17,7 +17,7 @@ cd /var/lib/jenkins/workspace/project_Ecommerce
 
 if [ -f "ecommerce.service" ]; then
 
-    sudo cp -r "ecommerce.service" /etc/systemd/system/
+    sudo cp -rf "ecommerce.service" /etc/systemd/system/
     sudo systemctl daemon-reload
     sudo systemctl enable "ecommerce.service"
     sudo systemctl restart "ecommerce.service"

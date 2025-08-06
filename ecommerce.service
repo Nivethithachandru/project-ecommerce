@@ -3,13 +3,14 @@ Description=Ecommerce Django Web Service
 After=network.target
 
 [Service]
-ExecStart=/var/lib/jenkins/workspace/venv/bin/python3 manage.py runserver 0.0.0.0:8011
+User=jenkins
+Group=jenkins
 WorkingDirectory=/var/lib/jenkins/workspace/project_Ecommerce
-User=root
-Group=root
+Environment="PATH=/var/lib/jenkins/workspace/venv/bin"
+ExecStart=/var/lib/jenkins/workspace/venv/bin/python3 /var/lib/jenkins/workspace/project_Ecommerce/core/manage.py runserver 0.0.0.0:8011
 Restart=always
 RestartSec=3
-Environment"PATH=/var/lib/jenkins/env"
 
 [Install]
 WantedBy=multi-user.target
+
