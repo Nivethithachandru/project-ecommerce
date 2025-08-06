@@ -7,7 +7,7 @@ PROJECT_DIR="/var/lib/jenkins/workspace"
 VENV_PATH="/var/lib/jenkins/workspace/venv"
 
 
-sudo chmod u+x /var/lib/jenkins
+sudo chmod u+x /var/lib/jenkins/workspace
 sudo chmod u+x "$PROJECT_DIR"
 
 
@@ -24,7 +24,7 @@ source "$VENV_PATH/bin/activate"
 
 
 cd "$PROJECT_DIR/project_Ecommerce" || { echo "django_webpage directory not found"; exit 1; }
-
+sudo chmod u+x "$PROJECT_DIR/project_Ecommerce"
 
 echo "Installing Python dependencies..."
 pip install --upgrade pip setuptools
