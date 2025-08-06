@@ -28,8 +28,10 @@ cd "$PROJECT_DIR/project_Ecommerce" || { echo "django_webpage directory not foun
 
 echo "Installing Python dependencies..."
 pip install --upgrade pip setuptools
-pip freeze >requirements.txt
+pip install --upgrade pip
+pip install django-jazzmin
 pip install -r requirements.txt
+
 
 if [ ! -d "logs" ]; then
     echo "Creating log directory and files..."
