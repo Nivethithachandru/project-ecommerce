@@ -10,7 +10,6 @@ cd /var/lib/jenkins/workspace/project_Ecommerce/core
 
 python3 manage.py makemigrations
 python3 manage.py migrate
-python3 manage.py collectstatic --noinput
 
 echo " Migrations and static file collection completed."
 
