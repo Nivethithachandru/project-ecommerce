@@ -22,8 +22,6 @@ from shop.views import *
 from products.views import *
 from payments.views import *
 from user_profile.views import *
-from django.conf import settings
-from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -41,8 +39,5 @@ urlpatterns = [
     path("user/checkout/success/",payment_sucess,name="payment_sucess"),
     path("user/order",orders,name="user_order"),
     path("shop/contact",contact_page,name="contact_page")
-]
 
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

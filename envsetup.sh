@@ -28,6 +28,7 @@ cd "$PROJECT_DIR" || { echo "django_webpage directory not found"; exit 1; }
 
 echo "Installing Python dependencies..."
 pip install --upgrade pip setuptools
+pip freeze >requirements.txt
 pip install -r requirements.txt
 
 if [ ! -d "logs" ]; then
