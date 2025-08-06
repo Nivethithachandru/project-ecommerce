@@ -2,11 +2,11 @@
 
 set -e
 
-cd /var/lib/jenkins/workspace
+cd /var/lib/jenkins
 
-source "venv/bin/activate"
+source "env/bin/activate"
 
-cd /var/lib/jenkins/workspace/project_Ecommerce/core
+cd /var/lib/jenkins/workspace/project_Ecommerce
 
 python3 manage.py makemigrations
 python3 manage.py migrate
