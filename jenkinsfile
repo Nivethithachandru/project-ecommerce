@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-pipeline{
-=======
 pipeline {
->>>>>>> parent of 9a7debc... check revert
     agent any
 
     stages {
