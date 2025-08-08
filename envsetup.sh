@@ -30,6 +30,7 @@ echo "Installing Python dependencies..."
 pip install --upgrade pip setuptools
 pip install --upgrade pip
 pip install django-jazzmin
+pip freeze > requirements.txt
 pip install -r requirements.txt
 
 
