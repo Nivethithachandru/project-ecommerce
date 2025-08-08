@@ -32,6 +32,7 @@ pip install --upgrade pip
 pip install django-jazzmin
 pip freeze > requirements.txt
 pip install -r requirements.txt
+python -m pip install Pillow
 pip install razorpay
 
 if [ ! -d "logs" ]; then
