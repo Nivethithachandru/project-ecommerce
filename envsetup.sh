@@ -32,7 +32,7 @@ pip install --upgrade pip
 pip install django-jazzmin
 pip freeze > requirements.txt
 pip install -r requirements.txt
-
+pip install razorpay
 
 if [ ! -d "logs" ]; then
     echo "Creating log directory and files..."
